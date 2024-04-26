@@ -5,17 +5,34 @@
 }
 
 #personajes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
     /* Complete el CSS aqui */
 }
 
 .personaje {
+    flex: 0 0 auto;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    border: 1px solid black;
+
 /* Complete el CSS aqui */
 }
 
 .personaje__nombre {
+    text-align: center;
+    color: black;
 /* Complete el CSS aqui */
 }
 
 .personaje__imagen {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
 /* Complete el CSS aqui */
 }
