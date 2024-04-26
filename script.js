@@ -12,9 +12,22 @@ const agregarPersonaje = (nombre, imagen) => {
   };
   
   const render = async () => {
+    const response = await fetch("https://raw.githubusercontent.com/JonatanOrdonez/fundamentos-programacion-diseno/main/2024-01/Labs/Lab%2011/personajes.json");
+    const json = await response.json();
+    const lista = json.personajes
+
+
+    for(let i = 0; i < lista.length; i++){
+        const list = lista[i]
+        agregarPersonaje(list.name, list.image)
+    }
+
+
+
     // 1. Completar el código aqui para cargar el archivo json y crear los elementos HTML.
     // 2. Para cargar el archivo json se debe usar la función fetch y luego convertir la respuesta a un objeto JSON usando la función json().
     // 3. La función agregarPersonaje(nombre, imagen) recibe los datos del personaje y crea el elemento HTML con la información del personaje.
   };
   
   document.addEventListener("DOMContentLoaded", render);
+  render();
